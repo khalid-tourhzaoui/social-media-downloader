@@ -29,7 +29,7 @@ export default {
         shad2: '-1px -2px 20px -1px #37347e',
       },
       dropShadow: {
-        back: '0px 0px 12px #6f69fd',
+        back: '0px 0px 12px #ffffff',
         back2: '3px 5px 9px #000000',
         back3: '3px 5px 6px #fff',
         back4: '0px 0px 4px #6f69fd',

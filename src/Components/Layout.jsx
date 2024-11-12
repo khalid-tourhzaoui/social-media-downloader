@@ -8,6 +8,10 @@ import { useState, useEffect, Suspense, lazy } from "react";
 import Loader from "./Loader";
 import BackGround from "./BackGround";
 import Fragment1 from "../assets/pngegg.png";
+import AboutFacebook from "./AboutFacebook";
+import AboutYoutube from "./AboutYoutube";
+import AboutTikTok from "./AboutTikTok";
+import AboutLinkedin from "./AboutLinkedin";
 const PageNotFound = lazy(() => import('./PageNotFound'));
 
 export default function Layout() {
@@ -44,6 +48,10 @@ export default function Layout() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/instagram" element={<AboutInstagram />} />
+                <Route path="/facebook" element={<AboutFacebook />} />
+                <Route path="/youtube" element={<AboutYoutube />} />
+                <Route path="/tiktok" element={<AboutTikTok />} />
+                <Route path="/linkedin" element={<AboutLinkedin />} />
                 <Route
                   path="*"
                   element={

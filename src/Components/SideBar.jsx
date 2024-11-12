@@ -59,11 +59,11 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          Developed by  :{" "}
-          <span className="md:text-lg">khalid tourhzaoui</span>
+          DEVELOPED BY  :{" "}
+          <span className="md:text-lg">KHALID TOURHZAOUI</span>
           <br />
-          Based in  :{" "}
-          <span className="md:text-lg">Tiflet, Morocco</span>
+          BASED IN  :{" "}
+          <span className="md:text-lg">TIFLET, MOROCCO</span>
           
         </motion.div>
         <SocialMediaIcon text="white" />

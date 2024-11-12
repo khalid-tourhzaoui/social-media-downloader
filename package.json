@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.18",
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.17.10",
     "@testing-library/jest-dom": "^5.17.0",
@@ -44,8 +45,10 @@
     ]
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.48",
-    "tailwindcss": "^3.4.14"
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.11"
   }
 }
