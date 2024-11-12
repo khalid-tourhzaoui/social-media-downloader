@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavElements } from './NavElements.jsx';
-// import ScrollButton from './ScrollButton.jsx';
-// import BurgerMenu from './BurgerMenu';
+import ScrollButton from './ScrollButton.jsx';
+import BurgerMenu from './BurgerMenu';
 
 export default function Menu() {
   const [active, setActive] = useState(false);
@@ -77,7 +77,7 @@ export default function Menu() {
 
   return (
     <>
-      {/* <ScrollButton /> */}
+      <ScrollButton />
       <div
         ref={divRef}
         className={`hidden md:block fixed md:top-[27%] md:w-fit md:right-6 z-20 transition-all duration-300`}
@@ -90,13 +90,13 @@ export default function Menu() {
           {mappedData}
         </div>
       </div>
-      {/* {okay && (
+      {okay && (
        
           <BurgerMenu active={active} setActive={() => setActive(pv => !pv)}>
             {mappedData}
           </BurgerMenu>
       
-      )} */}
+      )}
     </>
   );
 }

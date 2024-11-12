@@ -9,7 +9,7 @@ export default {
         },
       },
       fontFamily: {
-        customFont: ['Exo 2', 'sans-serif'],
+        customFont: ['Poppins', 'sans-serif'],
         myFont: ['Poppins', 'sans-serif'],
       },
       colors: {

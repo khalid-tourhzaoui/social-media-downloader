@@ -1,11 +1,12 @@
-import '../static/notFound.css';
-import { AnimatePresence } from 'framer-motion';
-import Transition from './Transition';
+import "../static/notFound.css";
+import { AnimatePresence } from "framer-motion";
+import Transition from "./Transition";
 export default function PageNotFound() {
   return (
     <AnimatePresence mode="wait">
       <Transition />
-      <div className="main_wrapper cursor-custom  mt-10 md:mt-0 md:pl-24 flex justify-center items-center md:w-4/5 w-full h-full md:h-screen  ">
+      <div className="main_wrapper cursor-custom  mt-10 md:mt-0 md:pl-24 flex justify-center items-center md:w-4/5 w-full h-full
+       md:h-screen  ">
         <div className="main">
           <div className="antenna">
             <div className="antenna_shadow"></div>

@@ -59,11 +59,11 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          My Email :{" "}
-          <span className="md:text-lg">khalidtourhzaoui@gmail.com</span>
+          Designed & Developed by  :{" "}
+          <span className="md:text-lg">khalid tourhzaoui</span>
           <br />
           Based in Tiflet, Morocco
-        </motion.div> 
+        </motion.div>
 
         <motion.div
           className="text-slate-300 text-center"
@@ -86,7 +86,7 @@ const Header = () => {
               rounded bg-primary1 ring-2 ring-white hover:ring-0 px-6 py-2 text-lg text-slate-800 hover:text-white 
               focus:outline-none focus:ring active:bg-indigo-600 active:text-white hover:scale-105 transition-all 
               duration-500 hover:shadow-shad hover:shadow-primary1`}
-            to={"/contactme"}
+            to={"https://khalid-tourhzaoui.vercel.app/contactme"} target="_blank"
           >
             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-white transition-all duration-500 group-hover:w-full"></span>
             <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-white transition-all duration-500 group-hover:h-full"></span>
