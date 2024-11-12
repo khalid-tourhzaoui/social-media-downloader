@@ -59,30 +59,21 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          Designed & Developed by  :{" "}
+          Developed by  :{" "}
           <span className="md:text-lg">khalid tourhzaoui</span>
           <br />
-          Based in Tiflet, Morocco
+          Based in  :{" "}
+          <span className="md:text-lg">Tiflet, Morocco</span>
+          
         </motion.div>
-
-        <motion.div
-          className="text-slate-300 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-        >
-          &copy; 2024 Khalid Tourhzaoui All&nbsp;Rights&nbsp;Reserved
-        </motion.div>
-
         <SocialMediaIcon text="white" />
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
         >
           <Link
-            className={`group font-semibold uppercase shadow-md shadow-primary4 relative inline-block overflow-hidden 
+            className={`group font-semibold uppercase shadow-md shadow-primary3 relative inline-block overflow-hidden 
               rounded bg-primary1 ring-2 ring-white hover:ring-0 px-6 py-2 text-lg text-slate-800 hover:text-white 
               focus:outline-none focus:ring active:bg-indigo-600 active:text-white hover:scale-105 transition-all 
               duration-500 hover:shadow-shad hover:shadow-primary1`}
@@ -95,6 +86,14 @@ const Header = () => {
             Contact Me!
           </Link>
         </motion.div>
+              <motion.div
+                className="text-slate-300 text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.5 }}
+              >
+                &copy; 2024 Khalid Tourhzaoui All&nbsp;Rights&nbsp;Reserved
+              </motion.div>
       </motion.div>
 
       {isDivVisible && (

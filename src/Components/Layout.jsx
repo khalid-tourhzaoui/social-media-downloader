@@ -2,14 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Home';
 import AboutInstagram from './AboutInstagram';
 import SideBar from './SideBar';
-// import Service from './Service';
 import Menu from './Menu';
 import Header from './Header';
 import { useState, useEffect, Suspense, lazy } from "react";
 import Loader from "./Loader";
 import BackGround from "./BackGround";
 import Fragment1 from "../assets/pngegg.png";
-// const ContactMe = lazy(() => import('./Contactme'));
 const PageNotFound = lazy(() => import('./PageNotFound'));
 
 export default function Layout() {
@@ -46,22 +44,6 @@ export default function Layout() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/instagram" element={<AboutInstagram />} />
-                {/* <Route path="/service" element={<Service />} />
-
-                <Route
-                  path="/contactme"
-                  element={
-                    <Suspense
-                      fallback={
-                        <div className=" pl-20">
-                          <Loader hiddenText={true} />
-                        </div>
-                      }
-                    >
-                      <ContactMe />
-                    </Suspense>
-                  }
-                /> */}
                 <Route
                   path="*"
                   element={

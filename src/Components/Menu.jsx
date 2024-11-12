@@ -85,7 +85,7 @@ export default function Menu() {
         <div
           className="flex justify-around font-customFont 
           text-white px-3 py-5 w-screen text-3xl bg-secondary1 md:flex-col md:w-max md:space-y-8 md:rounded-full ring-2 -mb-1
-           ring-secondary3 md:backdrop-blur-sm backdrop-blur-[5px] shadow-shad shadow-primary3"
+           ring-primary3 md:backdrop-blur-sm backdrop-blur-[5px] shadow-shad shadow-primary3"
         >
           {mappedData}
         </div>

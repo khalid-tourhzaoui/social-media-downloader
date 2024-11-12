@@ -1,8 +1,5 @@
-// import Paragraphe from './Paragraphe';
 import SecName from './SecName';
-// import Skills from './Skills';
 import {  motion } from 'framer-motion';
-import {  FaRegUserCircle } from 'react-icons/fa';
 import { AnimatePresence } from 'framer-motion';
 import Transition from './Transition';
 import { FaInstagram } from 'react-icons/fa';
@@ -45,10 +42,7 @@ export default function About() {
            mt-2 text-purple-100 transition-all duration-500">
             Download IG <span className="text-primary3">Stories & Reels</span>
           </div>
-          {/* <Paragraphe partie="1" /> */}
         </motion.div>
-
-        {/* <Skills /> */}
       </motion.div>
     </AnimatePresence>
   );

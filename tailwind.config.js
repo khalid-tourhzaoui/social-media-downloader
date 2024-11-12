@@ -9,7 +9,7 @@ export default {
         },
       },
       fontFamily: {
-        customFont: ['Poppins', 'sans-serif'],
+        customFont: ['Exo 2', 'sans-serif'],
         myFont: ['Poppins', 'sans-serif'],
       },
       colors: {
@@ -25,7 +25,7 @@ export default {
       },
 
       boxShadow: {
-        shad: '-1px -2px 36px -1px rgba(103,38,190,0.74)',
+        shad: '-1px -2px 36px -1px #00c9a7',
         shad2: '-1px -2px 20px -1px #37347e',
       },
       dropShadow: {

@@ -1,6 +1,4 @@
-// import ProjectBtn from './ProjectBtn';
-// import Title from './Title';
-// import Paragraphe from './Paragraphe';
+
 import SecName from './SecName';
 import { FaHome } from 'react-icons/fa';
 import {  motion } from 'framer-motion';
@@ -44,15 +42,7 @@ export default function Home() {
           variants={staggerItem}
           className="space-y-5 self-start flex justify-center flex-col items-start"
         >
-          {/* <Title /> */}
-          {/* <Paragraphe partie="0" /> */}
         </motion.div>
-        <div className=" w-full flex justify-center items-center">
-          <div className="w-4/5 -ml-16">
-            {' '}
-            {/* <ProjectBtn /> */}
-          </div>
-        </div>
       </motion.div>
     </AnimatePresence>
   );
