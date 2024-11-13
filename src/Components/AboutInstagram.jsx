@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { AnimatePresence } from "framer-motion";
 import Transition from "./Transition";
 import { useEffect, useRef, useState } from "react";
-import { getInstagram } from "../API/Data"; // Ensure this function returns data properly
+import { getInstagram,getTikTokData } from "../API/Data"; // Ensure this function returns data properly
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -55,7 +55,7 @@ export default function AboutInstagram() {
     }
 
     try {
-      const response = await getInstagram(userUrl); // Await data from API
+      const response = await getTikTokData(userUrl); // Await data from API
       setData(response);
       console.log(response); // Log response for debugging
       setSend('Sending...');
@@ -172,4 +172,3 @@ export default function AboutInstagram() {
     </AnimatePresence>
   );
 }
-
