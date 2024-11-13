@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function SecName({ secName, children }) {

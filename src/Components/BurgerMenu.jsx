@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Drawer } from "vaul";
 import BurgerIcon from "./BurgerIcon";
 

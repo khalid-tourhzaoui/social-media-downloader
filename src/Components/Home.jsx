@@ -24,9 +24,9 @@ const staggerItem = {
 export default function Home() {
   return (
     <AnimatePresence mode="wait">
-      <Transition key={1} />
+      <Transition key={6} />
       <motion.div
-        key={2}
+        key={7}
         initial="hidden"
         animate="show"
         variants={staggerContainer}

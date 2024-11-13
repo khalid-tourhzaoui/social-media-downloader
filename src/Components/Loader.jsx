@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import '../static/Loader.css';
 import Avatar from '../assets/avatar.png';
 import {motion} from 'framer-motion';

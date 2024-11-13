@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import SocialMedias from './SocialMedias';
 import { motion } from 'framer-motion';
 
