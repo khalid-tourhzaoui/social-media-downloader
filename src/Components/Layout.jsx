@@ -1,18 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './Home';
-import AboutInstagram from './AboutInstagram';
-import SideBar from './SideBar';
-import Menu from './Menu';
-import Header from './Header';
+import Home from "./Home";
+import AutoDetectDownloader from "./AutoDetectDownloader";
+import SideBar from "./SideBar";
+import Menu from "./Menu";
+import Header from "./Header";
 import { useState, useEffect, Suspense, lazy } from "react";
 import Loader from "./Loader";
 import BackGround from "./BackGround";
 import Fragment1 from "../assets/pngegg.png";
-import AboutFacebook from "./AboutFacebook";
-import AboutYoutube from "./AboutYoutube";
-import AboutTikTok from "./AboutTikTok";
-import AboutLinkedin from "./AboutLinkedin";
-const PageNotFound = lazy(() => import('./PageNotFound'));
+
+const PageNotFound = lazy(() => import("./PageNotFound"));
 
 export default function Layout() {
   const [loader, setLoader] = useState(false);
@@ -39,19 +36,84 @@ export default function Layout() {
             alt="error"
           />
           <div
-            className="relative w-full h-full flex justify-end flex-col-reverse md:flex-row items-center pb-24 md:pb-0
-           overflow-hidden cursor-custom">
+            className="relative w-full h-full flex justify-end flex-col-reverse md:flex-row items-center pb-24 md:pb-0 overflow-hidden cursor-custom"
+          >
             <Router>
               <Header />
               <SideBar />
               <Menu />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/instagram" element={<AboutInstagram />} />
-                <Route path="/facebook" element={<AboutFacebook />} />
-                <Route path="/youtube" element={<AboutYoutube />} />
-                <Route path="/tiktok" element={<AboutTikTok />} />
-                <Route path="/linkedin" element={<AboutLinkedin />} />
+                <Route
+                  path="/instagram"
+                  element={
+                    <Suspense
+                      fallback={
+                        <div className=" pl-20">
+                          <Loader hiddenText={true} />
+                        </div>
+                      }
+                    >
+                      <AutoDetectDownloader platform="instagram" />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/tiktok"
+                  element={
+                    <Suspense
+                      fallback={
+                        <div className=" pl-20">
+                          <Loader hiddenText={true} />
+                        </div>
+                      }
+                    >
+                      <AutoDetectDownloader platform="tiktok" />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/youtube"
+                  element={
+                    <Suspense
+                      fallback={
+                        <div className=" pl-20">
+                          <Loader hiddenText={true} />
+                        </div>
+                      }
+                    >
+                      <AutoDetectDownloader platform="youtube" />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/twitter"
+                  element={
+                    <Suspense
+                      fallback={
+                        <div className=" pl-20">
+                          <Loader hiddenText={true} />
+                        </div>
+                      }
+                    >
+                      <AutoDetectDownloader platform="twitter" />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/facebook"
+                  element={
+                    <Suspense
+                      fallback={
+                        <div className=" pl-20">
+                          <Loader hiddenText={true} />
+                        </div>
+                      }
+                    >
+                      <AutoDetectDownloader platform="facebook" />
+                    </Suspense>
+                  }
+                />
                 <Route
                   path="*"
                   element={

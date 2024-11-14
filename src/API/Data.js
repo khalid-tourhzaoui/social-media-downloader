@@ -2,27 +2,31 @@
 /*--------------------------------------------------------------------*/
 import axios from 'axios';
 
-const RequestInstagram = axios.create({
-    baseURL: 'https://instagram-bulk-scraper-latest.p.rapidapi.com/',
-    timeout: 30000,
-    headers: {
+const RequestInstagramAndYoutube = axios.create({
+  baseURL: 'https://full-downloader-social-media.p.rapidapi.com',
+  timeout: 30000,
+  headers: {
     'x-rapidapi-key': '371828caf7msh9dee98d80d26a06p1d43e9jsnebdd59a9dc58',
-    'x-rapidapi-host': 'instagram-bulk-scraper-latest.p.rapidapi.com',
-    'Content-Type': 'application/json'
-  }
+    'x-rapidapi-host': 'full-downloader-social-media.p.rapidapi.com',
+    'Content-Type': 'application/json',
+  },
 });
 
-export async function getInstagram(userUrl) {
-    try {
-        const response = await RequestInstagram.post('/media_download_from_url', {
-            url: userUrl
-        });
-    return response.data; 
-} catch (error) {
-    console.error('Error fetching Instagram data:', error);
-    throw error; 
+export async function getInstagramYoutubeData(videoUrl) {
+  try {
+    const response = await RequestInstagramAndYoutube.get('/', {
+      params: {
+        url: videoUrl, // The video URL as a query parameter
+        hd: 0, // Optional: Add HD parameter if supported
+      },
+    });
+    return response.data; // Return the API response data
+  } catch (error) {
+    console.error('Error fetching TikTok/Youtube data:', error);
+    throw error; // Rethrow error for caller to handle
+  }
 }
-}
+
 /*--------------------------------------------------------------------*/
 const RequestTikTok = axios.create({
   baseURL: 'https://tiktok-download-without-watermark.p.rapidapi.com',
