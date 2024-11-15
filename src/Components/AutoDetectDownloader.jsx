@@ -10,7 +10,7 @@ import {
 import { AnimatePresence } from "framer-motion";
 import Transition from "./Transition";
 import { useEffect, useRef, useState } from "react";
-import { getYoutubeData} from "../API/Data";
+import { getYoutubeData,getSocialMediaData} from "../API/Data";
 import DataResult from "./DataResult";
 
 const staggerContainer = {
@@ -79,6 +79,9 @@ export default function AutoDetectDownloader({ platform }) {
       switch (platform) {
         case "youtube":
           response = await getYoutubeData(userUrl);
+          break;
+        case "instagram":
+          response = await getSocialMediaData(userUrl);
           break;
         default:
           throw new Error("Unsupported platform");
