@@ -25,11 +25,11 @@ function VideoCard({
       <div className="w-full md:w-1/3 border-solid border-2 border-white rounded-lg hidden md:block">
         <a href={platformUrl} target="_blank" rel="noopener noreferrer">
         <img
-            src={platformImg || data.thumbnail || data.thumb}
-            alt={data.title || "Default image"}
-            className="w-1/3 sm:w-1/2 md:w-full mx-auto rounded-lg shadow-lg hover:shadow-primary2"
-            style={data.source === "tiktok" ? { width: "55%", height: "100%" } : undefined}
-            />
+        src={platformImg}
+        alt={data.title || "Default image"}
+        className="w-40 mx-auto rounded-lg shadow-lg "
+        style={data.source === "tiktok" ? { width: "55%", height: "100%" } : undefined}
+        />
         </a>
       </div>
       {/* Icône de la plateforme */}

@@ -10,7 +10,7 @@ import {
 import { AnimatePresence } from "framer-motion";
 import Transition from "./Transition";
 import { useEffect, useRef, useState } from "react";
-import { getSocialMediaDataV2,getSocialMediaData} from "../API/Data";
+import { getSocialMediaDataV2, getSocialMediaData } from "../API/Data";
 import DataResult from "./DataResult";
 
 const staggerContainer = {
@@ -111,7 +111,7 @@ export default function AutoDetectDownloader({ platform }) {
     form.current.reset();
     setUserUrl("");
     setErrors({ url: false });
-    setData(null); // Clear data when component re-renders
+    setData(null); 
   }, []);
   return (
     <>
@@ -122,26 +122,38 @@ export default function AutoDetectDownloader({ platform }) {
           initial="hidden"
           animate="show"
           variants={staggerContainer}
-          className="cursor-custom relative flex flex-col space-y-12 items-start md:w-3/5 w-full h-full md:mb-16  
-        mt-16 md:mt-0 pt-12 md:pt-24 ml-20"
+          className="cursor-custom relative flex flex-col space-y-8 items-start md:w-3/5 w-full h-full md:mb-16  
+        mt-10 md:mt-0 pt-12 md:pt-40 ml-20"
         >
           <SecName secName={platform || "unknown"}>
             {platform ? platformIcons[platform] : null}
           </SecName>
 
-          <motion.div
+          {/* <motion.div
             variants={staggerItem}
             className="space-y-3 self-start flex justify-center flex-col items-start "
           >
             <div
               className="backdrop-blur-[3px] lg:text-3xl xl:text-3xl md:text-2xl text-me uppercase font-semibold tracking-wide -mt-2 
-          text-purple-100 transition-all duration-500"
+          text-purple-100 transition-all duration-500 "
+            >
+              {platform ? platformIcons[`${platform}Title`] : "Unknown"}
+            </div>
+          </motion.div> */}
+          <motion.div
+            variants={staggerItem}
+            className="space-y-3 self-start flex justify-center flex-col items-start"
+          >
+            <div
+              className="backdrop-blur-[3px] text-lg sm:text-xl md:text-xl lg:text-3xl uppercase font-semibold tracking-wide
+              text-purple-100 transition-all duration-500"
             >
               {platform ? platformIcons[`${platform}Title`] : "Unknown"}
             </div>
           </motion.div>
+
           <form
-            className="space-y-4 self-start flex justify-center flex-col items-start"
+            className="space-y-4 self-start flex justify-center flex-col items-start w-full"
             onSubmit={sub}
             ref={form}
           >
@@ -159,10 +171,11 @@ export default function AutoDetectDownloader({ platform }) {
                 onChange={(e) => handleChange(e, setUserUrl, "url")}
                 name="user_url"
                 type="text"
+                placeholder="Enter your link"
                 onFocus={() => handleFocus("url")}
                 onBlur={() => handleBlur("url")}
-                className={`border-b border-gray-300 pt-2 focus:border-b-2 focus:border-primary2 transition-colors 
-                focus:outline-none peer bg-inherit w-full text-md ${
+                className={`border-b  border-gray-300 pt-2 p-3 focus:border-b-2 focus:border-primary2 transition-colors 
+                focus:outline-none peer bg-inherit w-96 text-md border-r-[5px] border-l-[5px] border-[#f68c09] rounded-2xl ${
                   errors.url ? "border-red-500" : ""
                 }`}
               />
@@ -171,23 +184,22 @@ export default function AutoDetectDownloader({ platform }) {
                 className={`absolute left-0 cursor-text transition-all ${
                   userUrl !== "" ? "-top-4 text-md text-primary2 " : "top-1"
                 } peer-focus:text-md peer-focus:-top-4 peer-focus:text-primary2 `}
-              >
-                url
-              </label>
+              ></label>
               {errors.url && (
-                <p className="self-start text-red-500 text-xs">
+                <p className="self-start text-red-500 text-md pt-5">
                   * url is required
                 </p>
               )}
             </motion.div>
 
             <motion.div
+              className="flex justify-start space-x-7 w-full"
               initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7 }}
             ></motion.div>
             <motion.div
-              className="flex justify-start space-x-7"
+              className="flex justify-start space-x-7 w-full"
               initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{
@@ -198,7 +210,7 @@ export default function AutoDetectDownloader({ platform }) {
               <motion.button
                 type="submit"
                 className="backdrop-blur-md after:backdrop-blur-md before:backdrop-blur-md  group group-hover:before:duration-500 
-              group-hover:after:duration-500 after:duration-500 border-primary1 shadow-shad hover:shadow-primary3 hover:border-primary5 
+              group-hover:after:duration-500 after:duration-500 border-primary1 shadow-shad2 hover:shadow-primary3 hover:border-primary3 
               hover:ring-2 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 
               underline-offset-2 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur origin-left 
               hover:decoration-2 bg-transparent relative bg-neutral-800 pl-3 h-14 w-56 border-2 text-left p-1 text-gray-50 text-base 
@@ -210,8 +222,8 @@ export default function AutoDetectDownloader({ platform }) {
               </motion.button>
             </motion.div>
           </form>
-          {/* <Service/> */}
-          {data &&  <DataResult data={data} />}
+
+          {data && <DataResult data={data} />}
         </motion.div>
       </AnimatePresence>
     </>

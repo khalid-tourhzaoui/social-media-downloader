@@ -30,6 +30,7 @@ function DataResult({ data }) {
             platformUrl={`https://www.youtube.com/watch?v=${data.shortcode}`}
             downloadUrl={format.download_url}
             channel_url={data.channel_url}
+            platformImg={data.thumb}
           />
         ))}
 
