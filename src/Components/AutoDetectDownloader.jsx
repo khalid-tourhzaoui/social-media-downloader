@@ -10,7 +10,7 @@ import {
 import { AnimatePresence } from "framer-motion";
 import Transition from "./Transition";
 import { useEffect, useRef, useState } from "react";
-import { getYoutubeData,getSocialMediaData} from "../API/Data";
+import { getSocialMediaDataV2,getSocialMediaData} from "../API/Data";
 import DataResult from "./DataResult";
 
 const staggerContainer = {
@@ -78,9 +78,18 @@ export default function AutoDetectDownloader({ platform }) {
       let response;
       switch (platform) {
         case "youtube":
-          response = await getYoutubeData(userUrl);
+          response = await getSocialMediaDataV2(userUrl);
           break;
         case "instagram":
+          response = await getSocialMediaData(userUrl);
+          break;
+        case "tiktok":
+          response = await getSocialMediaDataV2(userUrl);
+          break;
+        case "twitter":
+          response = await getSocialMediaData(userUrl);
+          break;
+        case "facebook":
           response = await getSocialMediaData(userUrl);
           break;
         default:

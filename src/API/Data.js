@@ -2,7 +2,7 @@
 /*--------------------------------------------------------------------*/
 import axios from 'axios';
 
-const RequestYoutube = axios.create({
+const RequestSocialMediaDataV2 = axios.create({
   baseURL: 'https://full-downloader-social-media.p.rapidapi.com',
   timeout: 30000,
   headers: {
@@ -12,9 +12,9 @@ const RequestYoutube = axios.create({
   },
 });
 
-export async function getYoutubeData(videoUrl) {
+export async function getSocialMediaDataV2(videoUrl) {
   try {
-    const response = await RequestYoutube.get('/', {
+    const response = await RequestSocialMediaDataV2.get('/', {
       params: {
         url: videoUrl, // The video URL as a query parameter
         hd: 0, // Optional: Add HD parameter if supported
@@ -27,31 +27,6 @@ export async function getYoutubeData(videoUrl) {
   }
 }
 
-/*--------------------------------------------------------------------*/
-const RequestTikTok = axios.create({
-  baseURL: 'https://tiktok-download-without-watermark.p.rapidapi.com',
-  timeout: 30000,
-  headers: {
-    'x-rapidapi-key': '371828caf7msh9dee98d80d26a06p1d43e9jsnebdd59a9dc58',
-    'x-rapidapi-host': 'tiktok-download-without-watermark.p.rapidapi.com',
-    'Content-Type': 'application/json',
-  },
-});
-
-export async function getTikTokData(videoUrl) {
-  try {
-    const response = await RequestTikTok.get('/analysis', {
-      params: {
-        url: videoUrl,
-        hd: 0,
-      },
-    });
-    return response.data; // Return the API response data
-  } catch (error) {
-    console.error('Error fetching TikTok data:', error);
-    throw error; // Rethrow the error for handling in the calling function
-  }
-}
 /*--------------------------------------------------------------------*/
 // Création de l'instance axios pour l'API
 const RequestSocialMediaData = axios.create({
