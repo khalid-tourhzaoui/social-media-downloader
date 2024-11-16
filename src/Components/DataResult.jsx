@@ -1,6 +1,7 @@
 import React from "react";
 import { FaYoutube, FaInstagram, FaTiktok, FaTwitter, FaFacebook } from "react-icons/fa";
 import VideoCard from "./VideoCard";
+import TiktokImg from "../assets/tiktok.svg";
 
 function DataResult({ data }) {
   if (!data && (!data.formats && !data.medias)) {
@@ -46,9 +47,10 @@ function DataResult({ data }) {
       {isTikTok && (
         <VideoCard
           data={data}
-          format={data.type}
+          format={data.medias[0]}
           platformIcon={<FaTiktok className="text-3xl" />}
           platformName="Compte"
+          platformImg={TiktokImg}
           platformUrl={data.shortcode}
           downloadUrl={data.download_url}
         />

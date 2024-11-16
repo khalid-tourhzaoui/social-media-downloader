@@ -84,7 +84,7 @@ export default function AutoDetectDownloader({ platform }) {
           response = await getSocialMediaData(userUrl);
           break;
         case "tiktok":
-          response = await getSocialMediaDataV2(userUrl);
+          response = await getSocialMediaData(userUrl);
           break;
         case "twitter":
           response = await getSocialMediaData(userUrl);
