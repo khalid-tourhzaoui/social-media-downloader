@@ -174,8 +174,8 @@ export default function AutoDetectDownloader({ platform }) {
                 placeholder="Enter your link"
                 onFocus={() => handleFocus("url")}
                 onBlur={() => handleBlur("url")}
-                className={`border-b  border-gray-300 pt-2 p-3 focus:border-b-2 focus:border-primary2 transition-colors 
-                focus:outline-none peer bg-inherit w-96 text-md border-r-[5px] border-l-[5px] border-[#f68c09] rounded-2xl ${
+                className={`border-r-[5px] border-l-[5px] border-[#f68c09] pt-2 p-3 focus:border-b-2 focus:border-primary2 
+                  transition-colors focus:outline-none peer bg-inherit w-96 text-md mx-auto  rounded-2xl ${
                   errors.url ? "border-red-500" : ""
                 }`}
               />

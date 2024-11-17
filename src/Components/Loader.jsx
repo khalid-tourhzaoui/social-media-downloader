@@ -1,5 +1,5 @@
 import '../static/Loader.css';
-import Avatar from '../assets/avatar.png';
+import Avatar from '../assets/Animation.gif';
 import {motion} from 'framer-motion';
 const Loader = ({ hiddenText  }) => {
   return (
