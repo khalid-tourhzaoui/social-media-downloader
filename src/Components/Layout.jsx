@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import AutoDetectDownloader from "./AutoDetectDownloader";
 import SideBar from "./SideBar";
 import Menu from "./Menu";
 import Header from "./Header";
@@ -10,6 +9,7 @@ import BackGround from "./BackGround";
 import Fragment1 from "../assets/pngegg.png";
 
 const PageNotFound = lazy(() => import("./PageNotFound"));
+const AutoDetectDownloader = lazy(() => import("./AutoDetectDownloader"));
 
 export default function Layout() {
   const [loader, setLoader] = useState(false);
@@ -35,9 +35,7 @@ export default function Layout() {
             src={Fragment1}
             alt="error"
           />
-          <div
-            className="relative w-full h-full flex justify-end flex-col-reverse md:flex-row items-center pb-24 md:pb-0 overflow-hidden cursor-custom"
-          >
+          <div className="relative w-full h-full flex justify-end flex-col-reverse md:flex-row items-center pb-24 md:pb-0 overflow-hidden cursor-custom">
             <Router>
               <Header />
               <SideBar />
@@ -60,18 +58,7 @@ export default function Layout() {
                 />
                 <Route
                   path="/tiktok"
-                  element={
-                    <Suspense
-                      fallback={
-                        <div className=" pl-20">
-                          <Loader hiddenText={true} />
-                        </div>
-                      }
-                    >
-                      <AutoDetectDownloader platform="tiktok" />
-                    </Suspense>
-                  }
-                />
+                  element={<AutoDetectDownloader platform="tiktok"/>}/>
                 <Route
                   path="/youtube"
                   element={
@@ -102,18 +89,7 @@ export default function Layout() {
                 />
                 <Route
                   path="/facebook"
-                  element={
-                    <Suspense
-                      fallback={
-                        <div className=" pl-20">
-                          <Loader hiddenText={true} />
-                        </div>
-                      }
-                    >
-                      <AutoDetectDownloader platform="facebook" />
-                    </Suspense>
-                  }
-                />
+                  element={<AutoDetectDownloader platform="facebook" />}/>
                 <Route
                   path="*"
                   element={

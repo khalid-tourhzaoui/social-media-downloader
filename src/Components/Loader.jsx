@@ -1,5 +1,5 @@
 import '../static/Loader.css';
-import Avatar from '../assets/Animation.gif';
+import Avatar from '../assets/Loading.gif';
 import {motion} from 'framer-motion';
 const Loader = ({ hiddenText  }) => {
   return (
@@ -36,10 +36,10 @@ const Loader = ({ hiddenText  }) => {
               <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.3, ease: 'easeInOut' }}
+                transition={{ duration: 1, delay: 0.0001, ease: 'easeInOut' }}
                 src={Avatar}
                 alt="logo"
-                width={140}
+                width={340}
               />
             </div>
             <div data-glitch="Welcome..." className="glitch">

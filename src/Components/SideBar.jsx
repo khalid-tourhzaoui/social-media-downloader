@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import myLogo from "../assets/avatar.png";
+import myLogo from "../assets/man.png";
 import SocialMediaIcon from "./SocialMediaIcon";
 import ScrollerVaul from "./ScrollerVaul";
 import FooterImg from "../assets/FooterImg.png";
@@ -50,7 +50,7 @@ const Header = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <img src={myLogo} className="w-30 drop-shadow-back" alt="Logo" />
+          <img src={myLogo} className="w-60 drop-shadow-back" alt="Logo" />
         </motion.div>
 
         <motion.div

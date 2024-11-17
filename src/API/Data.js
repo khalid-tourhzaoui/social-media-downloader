@@ -16,14 +16,14 @@ export async function getSocialMediaDataV2(videoUrl) {
   try {
     const response = await RequestSocialMediaDataV2.get('/', {
       params: {
-        url: videoUrl, // The video URL as a query parameter
-        hd: 0, // Optional: Add HD parameter if supported
+        url: videoUrl, 
+        hd: 0, 
       },
     });
-    return response.data; // Return the API response data
+    return response.data; 
   } catch (error) {
     console.error('Error fetching Youtube data:', error);
-    throw error; // Rethrow error for caller to handle
+    throw error; 
   }
 }
 
@@ -39,15 +39,16 @@ const RequestSocialMediaData = axios.create({
   },
 });
 
-// Fonction pour récupérer les données à partir d'une URL de vidéo
+
 export async function getSocialMediaData(videoUrl) {
   try {
     const response = await RequestSocialMediaData.post('/autolink', {
-      url: videoUrl, // Le corps de la requête contient l'URL de la vidéo
+      url: videoUrl, 
     });
-    return response.data; // Retourne les données de la réponse API
+    return response.data; 
   } catch (error) {
     console.error('Error fetching social media data:', error);
-    throw error; // Propagation de l'erreur pour gestion ultérieure
+    throw error; 
   }
 }
+/*--------------------------------------------------------------------*/
