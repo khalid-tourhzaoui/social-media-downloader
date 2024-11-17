@@ -112,7 +112,7 @@ export default function Home() {
         className="cursor-custom relative pt-20 flex flex-col  space-y-20 md:space-y-14 items-center md:w-3/5 
         pl-10 mt-16 md:mt-0 md:pl-0 w-full h-full md:h-screen md:pt-32"
       >
-        <div className="self-start mt-8 flex justify-start ">
+        <div className="self-start -mt-8 sm:mt-8 md:-mt-8 lg:mt-10 flex justify-start ">
           <SecName secName="Introduce">
             <FaHome />
           </SecName>
