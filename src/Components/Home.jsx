@@ -123,8 +123,8 @@ export default function Home() {
           className="space-y-5 self-start flex justify-center flex-col items-start"
         >
           <div className="w-full text-start">
-            <h1 className="-mt-6 text-white text-me lg:text-3xl xl:text-3xl font-customFont font-semibold transition-all
-               duration-500 backdrop-blur-[3px] uppercase ml-0 sm:ml-6 xl:ml-0 lg:ml-0">
+            <h1 className="-mt-6 text-white text-xl sm:text-3xl md:text-lg lg:text-3xl font-customFont font-semibold transition-all
+               duration-500 backdrop-blur-[3px] uppercase ">
               Download content from :
               <span
                 className="lg:text-3xl xl:text-3xl font-customFont text-primary1 font-semibold transition-all
