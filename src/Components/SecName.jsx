@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function SecName({ secName, children }) {
-  console.log(secName);
   return (
     <AnimatePresence>
       <motion.div
