@@ -129,17 +129,6 @@ export default function AutoDetectDownloader({ platform }) {
             {platform ? platformIcons[platform] : null}
           </SecName>
 
-          {/* <motion.div
-            variants={staggerItem}
-            className="space-y-3 self-start flex justify-center flex-col items-start "
-          >
-            <div
-              className="backdrop-blur-[3px] lg:text-3xl xl:text-3xl md:text-2xl text-me uppercase font-semibold tracking-wide -mt-2 
-          text-purple-100 transition-all duration-500 "
-            >
-              {platform ? platformIcons[`${platform}Title`] : "Unknown"}
-            </div>
-          </motion.div> */}
           <motion.div
             variants={staggerItem}
             className="space-y-3 self-start flex justify-center flex-col items-start"
@@ -174,8 +163,8 @@ export default function AutoDetectDownloader({ platform }) {
                 placeholder="Enter your link"
                 onFocus={() => handleFocus("url")}
                 onBlur={() => handleBlur("url")}
-                className={`border-r-[5px] border-l-[5px] border-[#f68c09] pt-2 p-3 focus:border-b-2 focus:border-primary2 
-                  transition-colors focus:outline-none peer bg-inherit w-96 text-md mx-auto  rounded-2xl ${
+                className={`border-r-[5px] border-b-[2px] border-l-[5px] border-[#f68c09] pt-2 p-3 focus:border-b-2 focus:border-primary2 
+                  transition-colors focus:outline-none peer bg-inherit w-full text-md mx-auto  rounded-2xl ${
                   errors.url ? "border-red-500" : ""
                 }`}
               />
