@@ -163,10 +163,10 @@ export default function AutoDetectDownloader({ platform }) {
                 placeholder="Enter your link"
                 onFocus={() => handleFocus("url")}
                 onBlur={() => handleBlur("url")}
-                className={`border-r-[5px] border-b-[2px] border-l-[5px] border-[#f68c09] pt-2 p-3 focus:border-b-2 focus:border-primary2 
-                  transition-colors focus:outline-none peer bg-inherit w-full text-md mx-auto  rounded-2xl ${
-                  errors.url ? "border-red-500" : ""
-                }`}
+                className={`border-r-[5px] border-b-[2px] border-l-[5px] border-[#f68c09] pt-2 p-3 
+                  focus:border-b-2 focus:border-primary2 transition-colors focus:outline-none peer 
+                  bg-inherit w-full sm:w-full md:w-96 lg:w-96 text-md mx-auto rounded-2xl 
+                  ${errors.url ? "border-red-500" : ""}`}
               />
               <label
                 htmlFor="url"
