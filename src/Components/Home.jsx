@@ -124,12 +124,11 @@ export default function Home() {
         >
           <div className="w-full text-start">
             <h1 className="-mt-6 text-white text-me lg:text-3xl xl:text-3xl font-customFont font-semibold transition-all
-               duration-500 backdrop-blur-[3px] uppercase">
+               duration-500 backdrop-blur-[3px] uppercase ml-0 sm:ml-6 xl:ml-0 lg:ml-0">
               Download content from :
               <span
-                className="ml-2 lg:text-3xl xl:text-3xl font-customFont text-primary1 font-semibold transition-all
-               duration-500 backdrop-blur-[3px]"
-              >
+                className="lg:text-3xl xl:text-3xl font-customFont text-primary1 font-semibold transition-all
+               duration-500 backdrop-blur-[3px]">
                   {displayText}
                 <span className="inline-flex overflow-hidden text-primary1">
                   {blink ? "|" : "\u00A0"}
