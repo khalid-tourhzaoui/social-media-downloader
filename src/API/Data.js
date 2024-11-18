@@ -33,9 +33,9 @@ const RequestSocialMediaData = axios.create({
   baseURL: 'https://social-download-all-in-one.p.rapidapi.com/v1/social',
   timeout: 30000,
   headers: {
-    'x-rapidapi-key': '371828caf7msh9dee98d80d26a06p1d43e9jsnebdd59a9dc58',
-    'x-rapidapi-host': 'social-download-all-in-one.p.rapidapi.com',
-    'Content-Type': 'application/json',
+    'x-rapidapi-key': '3b936cfdb5msha7a1a3acc8c0d11p1e88ddjsn3313c92ca76d',
+		'x-rapidapi-host': 'social-download-all-in-one.p.rapidapi.com',
+		'Content-Type': 'application/json'
   },
 });
 

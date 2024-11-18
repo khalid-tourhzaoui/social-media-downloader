@@ -22,13 +22,15 @@ function VideoCard({
       transition={{ duration: 0.7, delay: 0.3 }}
     >
       {/* Miniature */}
-      <div className="w-full md:w-1/3 border-solid border-2 border-white rounded-lg hidden md:block">
+      <div className={`w-full md:w-1/3 border-solid border-2 border-white rounded-lg hidden md:block 
+        ${data.hosting=="youtube" ? 'bg-transparent' : 'bg-white'}`}>
         <a href={platformUrl} target="_blank" rel="noopener noreferrer">
         <img
         src={platformImg}
         alt={data.title || "Default image"}
-        className="w-40 mx-auto rounded-lg shadow-lg "
-        style={data.source === "tiktok" ? { width: "55%", height: "100%" } : undefined}
+        className={`mx-auto rounded-lg shadow-lg 
+          ${data.source==="instagram"?'w-36':data.source==='tiktok'?'w-32':data.source==='x'?'w-32':data.hosting==='youtube'?
+            'w-40':data.source==="facebook"?'w-32':'none'}`}
         />
         </a>
       </div>
@@ -42,7 +44,7 @@ function VideoCard({
       <div className="flex flex-col justify-between w-full md:w-2/3 space-y-2">
         <div className="font-bold text-md group-hover:scale-105 group-hover:ml-2 transition-all">
           {data.title.length > 40
-            ? data.title.substring(0, 45) + "..."
+            ? data.title.substring(0,45) + "..."
             : data.title}
         </div>
         <div className="text-md text-primary2 font-medium">

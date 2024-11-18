@@ -2,7 +2,9 @@ import React from "react";
 import { FaYoutube, FaInstagram, FaTiktok, FaTwitter, FaFacebook } from "react-icons/fa";
 import VideoCard from "./VideoCard";
 import TiktokImg from "../assets/tiktok.svg";
-
+import instagramImg from "../assets/instagram.png";
+import facebookImg from "../assets/facebook.png";
+import twitterImg from "../assets/twitter.png";
 function DataResult({ data }) {
   if (!data && (!data.formats && !data.medias)) {
     return <div className="text-red-500">No data available or invalid format</div>;
@@ -42,6 +44,7 @@ function DataResult({ data }) {
           platformName="Compte"
           platformUrl={data.url}
           downloadUrl={data.medias[0].url}
+          platformImg={instagramImg}
         />
       )}
 
@@ -64,6 +67,7 @@ function DataResult({ data }) {
           platformName="Compte"
           platformUrl={data.url}
           downloadUrl={data.medias[0].url}
+          platformImg={twitterImg}
         />
       )}
       {isFacebook && (
@@ -74,6 +78,7 @@ function DataResult({ data }) {
           platformName="Compte"
           platformUrl={data.url}
           downloadUrl={data.medias[0].url}
+          platformImg={facebookImg}
         />
       )}
 
