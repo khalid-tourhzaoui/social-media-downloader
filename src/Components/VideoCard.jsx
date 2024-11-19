@@ -14,15 +14,15 @@ function VideoCard({
 }) {
   return (
     <motion.div
-      className="relative backdrop-blur-[3px] group flex flex-col md:flex-row md:items-start ring-1 ring-current space-y-2 md:space-y-0
-       md:space-x-4 p-3 rounded-2xl shadow-shad transition-shadow duration-300 hover:shadow-primary1 hover:ring-primary2 hover:ring-2 
-       text-white md:w-4/5 sm:w-3/4"
+      className="relative backdrop-blur-[3px] group flex flex-col md:flex-row md:items-start ring-1 ring-current space-y-2 
+      md:space-y-0 md:space-x-4 p-3 rounded-2xl shadow-shad transition-shadow duration-300 hover:shadow-primary1 
+      hover:ring-primary2 hover:ring-2 text-white md:w-5/5 sm:w-3/4"
       initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 0.7, delay: 0.3 }}
     >
       {/* Miniature */}
-      <div className={`w-full md:w-1/3 border-solid border-2 border-white rounded-lg hidden md:block 
+      <div className={`w-full md:w-1/3 border-solid border-2 border-white rounded-lg 
         ${data.hosting=="youtube" ? 'bg-transparent' : 'bg-white'}`}>
         <a href={platformUrl} target="_blank" rel="noopener noreferrer">
         <img
