@@ -123,11 +123,11 @@ export default function Home() {
           className="space-y-5 self-start flex justify-center flex-col items-start"
         >
           <div className="w-full text-start">
-            <h1 className="-mt-6 text-white text-xl sm:text-3xl md:text-lg lg:text-3xl font-customFont font-semibold transition-all
+            <h1 className="-mt-6 text-white text-start self-start text-3xl font-customFont font-semibold transition-all
                duration-500 backdrop-blur-[3px] uppercase ">
               Download content from :
               <span
-                className="lg:text-3xl xl:text-3xl font-customFont text-primary1 font-semibold transition-all
+                className="text-start self-start text-3xl font-customFont text-primary1 font-semibold transition-all
                duration-500 backdrop-blur-[3px]">
                   {displayText}
                 <span className="inline-flex overflow-hidden text-primary1">
