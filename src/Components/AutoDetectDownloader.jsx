@@ -35,7 +35,7 @@ export default function AutoDetectDownloader({ platform }) {
   const platformUrlPatterns = {
     instagram: /^(https?:\/\/)?(www\.)?instagram\.com\/.+$/i,
     facebook: /^(https?:\/\/)?(www\.)?facebook\.com\/.+$/i,
-    tiktok: /^(https?:\/\/)?(www\.)?tiktok\.com\/.+$/i,
+    tiktok: /^(https?:\/\/)?(www\.)?(tiktok\.com\/.+|vm\.tiktok\.com\/.+)$/i,
     youtube: /^(https?:\/\/)?(www\.)?(youtube\.com\/.+|youtu\.be\/.+)$/i,
     twitter: /^(https?:\/\/)?(www\.)?x\.com\/.+$/i,
   };

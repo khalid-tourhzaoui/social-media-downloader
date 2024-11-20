@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# **Social Media Video Downloader**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **Social Media Video Downloader**! This project allows users to download videos from popular platforms like Instagram, TikTok, YouTube, Facebook, and Twitter.
+![Portfolio Screenshot](public/Desktop.png)
+## **Visit the App:** [Social Media Downloader](https://socialmediadownload.vercel.app/)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Table of Contents**
 
-### `npm start`
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **About the Project**
 
-### `npm test`
+This is a modern web application designed for downloading videos from social media platforms. It provides a seamless user experience with responsive design and intuitive animations. The app handles different video URLs, validates them based on the selected platform, and interacts with APIs to fetch video data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **Features**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Multi-Platform Support:**
+  - Instagram: Download Stories, Reels, and Videos.
+  - TikTok: Download using full or shortened links.
+  - YouTube: Fetch and download videos using direct links.
+  - Facebook: Supports public video URLs.
+  - Twitter: Download videos and GIFs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Error Handling:**
+  - Invalid URLs: Displays a friendly error message if the URL doesn’t match the selected platform.
+  - API Expiry: Notifies when the API key is expired or invalid.
+  - Platform Mismatch: Alerts users if a TikTok URL is entered in the Instagram section, for example.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Responsive Design:** Works seamlessly on desktops, tablets, and smartphones.
+- **Modern Animations:** Smooth transitions and effects using **Framer Motion**.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## **Used Technologies**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend:**
+  - React.js
+  - Tailwind CSS
+  - Framer Motion
+- **APIs:**
+  - RapidAPI (for social media video downloading)
+- **Other Tools:**
+  - React Icons for platform logos.
+  - Axios for API communication.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## **Installation**
 
-## Learn More
+To set up the project locally, follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/social-media-downloader.git
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Navigate to the project directory:**
+   ```bash
+   cd social-media-downloader
+   ```
 
-### Code Splitting
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-### Analyzing the Bundle Size
+5. Open your browser and go to `http://localhost:3000` to view the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **Contact**
+- **Email:** [khalidtourhzaoui@gmail.com](mailto:khalidtourhzaoui@gmail.com)
+- **LinkedIn :** [LinkedIn Profile](https://www.linkedin.com/in/khalid-tourhzaoui/)
+- **My website:** [ Contact me](https://khalid-tourhzaoui.vercel.app/contactme)
