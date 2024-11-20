@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from '../static/bubble.module.css';
 import { Link } from 'react-router-dom';
-import AppStoreButton from '../assets/AppStoreButton.gif'
 const Header = () => {
   const Me = () => 'Social Media Downloader'.split('');
   return (
@@ -30,15 +29,6 @@ const Header = () => {
                 {child}
               </motion.span>
             ))}
-              {/* <motion.span
-                key={1}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 * 0.15 }}
-                className={`${styles.hoverText}`}
-              >
-                <img src={AppStoreButton} className='w-96 mt-20' alt="" />
-              </motion.span> */}
           </Link>
         </motion.h2>
       </div>
