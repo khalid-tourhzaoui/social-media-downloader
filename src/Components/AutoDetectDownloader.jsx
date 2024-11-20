@@ -37,7 +37,7 @@ export default function AutoDetectDownloader({ platform }) {
     facebook: /^(https?:\/\/)?(www\.)?facebook\.com\/.+$/i,
     tiktok: /^(https?:\/\/)?(www\.)?tiktok\.com\/.+$/i,
     youtube: /^(https?:\/\/)?(www\.)?(youtube\.com\/.+|youtu\.be\/.+)$/i,
-    twitter: /^(https?:\/\/)?(www\.)?twitter\.com\/.+$/i,
+    twitter: /^(https?:\/\/)?(www\.)?x\.com\/.+$/i,
   };
 
   const platformIcons = {
