@@ -14,16 +14,16 @@ function VideoCard({
 }) {
   return (
     <motion.div
-      className="relative backdrop-blur-[3px] group flex flex-col md:flex-row md:items-start ring-1 ring-current space-y-2 
+      className={`relative backdrop-blur-[3px] group flex flex-col md:flex-row md:items-start ring-1 ring-current space-y-2 
       md:space-y-0 md:space-x-4 p-3 rounded-2xl shadow-shad transition-shadow duration-300 hover:shadow-primary1 
-      hover:ring-primary2 hover:ring-2 text-white md:w-5/5 sm:w-3/4"
+      hover:ring-primary2 hover:ring-2 text-white md:w-5/5 sm:w-3/4`}
       initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 0.7, delay: 0.3 }}
     >
       {/* Miniature */}
       <div className={`w-full md:w-1/3 border-solid border-2 border-white rounded-lg 
-        ${data.hosting=="youtube" ? 'bg-transparent' : 'bg-white'}`}>
+        ${data.hosting=="youtube" ? 'bg-transparent':'bg-black'}`}>
         <a href={platformUrl} target="_blank" rel="noopener noreferrer">
         <img
         src={platformImg}
@@ -43,9 +43,9 @@ function VideoCard({
       {/* Contenu texte */}
       <div className="flex flex-col justify-between w-full md:w-2/3 space-y-2">
         <div className="font-bold text-md group-hover:scale-105 group-hover:ml-2 transition-all">
-          {data.title.length > 40
-            ? data.title.substring(0,45) + "..."
-            : data.title}
+          {data.title.length > 40 && data.source=="x"
+            ? data.title.substring(0,35) + "..."
+            : data.title.length > 40 ? data.title.substring(0,45) + "..." : data.title}
         </div>
         <div className="text-md text-primary2 font-medium">
           <a
@@ -57,7 +57,9 @@ function VideoCard({
                 : data.source === "instagram"
                 ? `https://instagram.com/${data.author}`
                 : data.hosting === "tiktok"
-                ? platformUrl
+                ? `https://tiktok.com/${data.author}`
+                : data.source === "facebook"
+                ? `https://facebook.com/${data.author}`
                 : "#"
             }
             target="_blank"

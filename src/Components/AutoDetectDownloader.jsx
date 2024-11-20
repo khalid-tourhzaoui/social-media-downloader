@@ -32,6 +32,14 @@ const staggerItem = {
   },
 };
 export default function AutoDetectDownloader({ platform }) {
+  const platformUrlPatterns = {
+    instagram: /^(https?:\/\/)?(www\.)?instagram\.com\/.+$/i,
+    facebook: /^(https?:\/\/)?(www\.)?facebook\.com\/.+$/i,
+    tiktok: /^(https?:\/\/)?(www\.)?tiktok\.com\/.+$/i,
+    youtube: /^(https?:\/\/)?(www\.)?(youtube\.com\/.+|youtu\.be\/.+)$/i,
+    twitter: /^(https?:\/\/)?(www\.)?twitter\.com\/.+$/i,
+  };
+
   const platformIcons = {
     instagram: <FaInstagram className="text-xl" />,
     facebook: <FaFacebook className="text-xl" />,
@@ -67,8 +75,22 @@ export default function AutoDetectDownloader({ platform }) {
 
   const sub = async (e) => {
     e.preventDefault();
-    if (!userUrl.trim() || !platform) {
-      setErrors({ url: "Valid URL is required" });
+    if (!userUrl.trim()) {
+      setErrors({ url: "URL is required" });
+      return;
+    }
+
+    if (!platform) {
+      setErrors({ url: "Please select a valid platform" });
+      return;
+    }
+
+    // Validate URL against the selected platform's pattern
+    const urlPattern = platformUrlPatterns[platform];
+    if (!urlPattern || !urlPattern.test(userUrl)) {
+      setErrors({
+        url: `The URL does not match the selected platform (${platform}).`,
+      });
       return;
     }
 
@@ -100,8 +122,31 @@ export default function AutoDetectDownloader({ platform }) {
       // const formattedData = Array.isArray(response) ? response : [response];
       setData(response);
     } catch (error) {
-      console.error(`Error fetching data for ${platform}:`, error);
-      setErrors({ url: `Error fetching data from ${platform}` });
+      if (error.response) {
+        const { status, data } = error.response;
+
+        if (status === 401 || status === 403) {
+          setErrors({
+            url: "API key expired or invalid. Please try again later.",
+          });
+        } else if (status === 400) {
+          setErrors({ url: "Invalid URL. Please check and try again." });
+        } else {
+          setErrors({
+            url: `Error: ${data?.message || "An unexpected error occurred."}`,
+          });
+        }
+      } else if (error.request) {
+        // Handle network issues
+        setErrors({
+          url: "Network error. Please check your connection and try again.",
+        });
+      } else {
+        // Handle other unexpected errors
+        setErrors({ url: "Something went wrong. Please try again later." });
+      }
+
+      console.error("Error fetching data:", error);
     } finally {
       setSend("Download");
     }
@@ -111,7 +156,7 @@ export default function AutoDetectDownloader({ platform }) {
     form.current.reset();
     setUserUrl("");
     setErrors({ url: false });
-    setData(null); 
+    setData(null);
   }, []);
   return (
     <>
@@ -123,7 +168,7 @@ export default function AutoDetectDownloader({ platform }) {
           animate="show"
           variants={staggerContainer}
           className="cursor-custom relative flex flex-col space-y-8 items-start md:w-3/5 w-full h-full md:mb-16  
-        mt-10 md:mt-0 pt-12 md:pt-40 ml-20"
+        mt-10 md:mt-0 pt-20 md:pt-40 ml-20"
         >
           <SecName secName={platform || "unknown"}>
             {platform ? platformIcons[platform] : null}
