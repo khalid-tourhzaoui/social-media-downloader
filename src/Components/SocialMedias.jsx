@@ -14,10 +14,6 @@ export const SocialMedias = [
     icon: <FaTwitter />,
     url: 'https://x.com/The__khalid',
   },
-  {
-    id: 5,
-    icon: <FaWhatsapp />,
-    url: 'https://wa.me/212766933356',
-  },
+  
 ];
 export default SocialMedias;
