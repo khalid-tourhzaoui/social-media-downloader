@@ -50,7 +50,7 @@ const Header = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <img src={myLogo} className="w-60 drop-shadow-back" alt="Logo" />
+          <img src={myLogo} className="w-52 drop-shadow-back" alt="Logo" />
         </motion.div>
 
         <motion.div
